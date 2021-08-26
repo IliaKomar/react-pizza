@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
@@ -78,7 +79,7 @@ PizzaBlock.propTypes = {
     imageUrl: PropTypes.string,
     price: PropTypes.number,
     types: PropTypes.arrayOf(PropTypes.number),
-    sizes: PropTypes.arrayOf(PropTypes.number),
+    sizes: PropTypes.arrayOf(PropTypes.number)
 };
 
 PizzaBlock.defaultProps = {
