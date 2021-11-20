@@ -9,7 +9,6 @@ import {
 } from "../components";
 import { fetchPizzas } from "../redux/actions/pizzas";
 import { setCategory, setSortBy } from "../redux/actions/filters";
-import { addPizzaToCart } from "../redux/actions/cart";
 
 const categoryNames = [
   "Мясные",
@@ -69,7 +68,7 @@ function Home() {
             <PizzaBlock
               onClickAddPizza={handleAddPizzaToCart}
               key={obj.id}
-              addedCount={cartItems[obj.id] && cartItems[obj.id].length}
+              addedCount={cartItems[obj.id] && cartItems[obj.id].items.length}
               {...obj} />
           ))
           : Array(10)
